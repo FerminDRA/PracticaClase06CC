@@ -63,11 +63,10 @@ public class DAOVenta implements IDAOGeneral<Venta, Integer>{
         vent.setDetalle(p.getDetalle());
         session.update(vent);
         
-        if (vent != null && p.getDetalle() != null) {;
+        if (p.getDetalle() != null) {
             Query q = session.createQuery("delete DetalleVenta where idVenta ="+id);
             q.executeUpdate();
             for (DetalleVenta det: vent.getDetalle()) {
-                //DetalleVenta det = iterator.next();
                 det.setVenta(vent);
                 session.save(det);
             }

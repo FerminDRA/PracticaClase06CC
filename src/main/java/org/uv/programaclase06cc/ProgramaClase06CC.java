@@ -39,12 +39,12 @@ public class ProgramaClase06CC {
         venta.getDetalle().add(d2);
         
         dao.update(2,venta);
-//        boolean res=dao.delete(1);
+/**        boolean res=dao.delete(1);
 //        if (res) {
 //            System.out.println("Se ha borrado");
 //        }
 //        else{
 //            System.out.println("Errorrrrr");
 //        }
-    }
+***/    }
 }
